@@ -1,5 +1,40 @@
-# nodejs-aws-cart-api
+# Cart API Service
 
+## API Endpoints
+
+### Base URL
+
+https://clv4uq63tjqjx52sqzia33d63e0uluqz.lambda-url.eu-west-1.on.aws
+
+
+### Health Check
+- **Endpoint**: `/`
+- **Method**: GET
+- **Description**: Checks the health status of the service
+- **Example Request**:
+  ```bash
+  curl https://clv4uq63tjqjx52sqzia33d63e0uluqz.lambda-url.eu-west-1.on.aws/
+
+
+  {"statusCode":200,"message":"OK"}
+```
+```
+Cart model:
+
+carts:
+id - uuid (Primary key)
+user_id - uuid, not null (It's not Foreign key, because there is no user entity in DB)
+created_at - date, not null
+updated_at - date, not null
+status - enum ("OPEN", "ORDERED")
+
+Cart Item model:
+
+cart_items:
+cart_id - uuid (Foreign key from carts.id)
+product_id - uuid
+count - integer (Number of items in a cart)
+```
 ## Installation
 
 ```bash
