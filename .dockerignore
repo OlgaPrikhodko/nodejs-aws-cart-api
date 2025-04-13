@@ -1,0 +1,35 @@
+# Dependencies
+node_modules/
+npm-debug.log
+
+# Source control
+.git
+.gitignore
+
+# Environment (for security)
+.env
+.env.*
+
+# Build outputs
+dist/
+build/
+
+# Development files
+*.md
+.prettierrc
+.eslintrc
+test/
+*.test.ts
+*.spec.ts
+
+# IDE specific
+.idea/
+.vscode/
+
+# Misc
+.DS_Store
+
+
+**/*.spec.ts
+**/*.test.ts
+jest.config.js
