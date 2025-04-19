@@ -1,0 +1,4 @@
+eb create prod \
+--cname olha-cart-api-prod \
+--single \
+--envvars .env.prod

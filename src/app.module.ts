@@ -26,7 +26,11 @@ dotenv.config();
       database: process.env.DB_NAME,
       entities: [CartEntity, CartItemEntity],
       synchronize: false,
-      ssl: false,
+      // ssl: false,
+      ssl: {
+        rejectUnauthorized: false, // For development only
+        // In production, you should use proper SSL certificates
+      },
     }),
     AuthModule,
     CartModule,
