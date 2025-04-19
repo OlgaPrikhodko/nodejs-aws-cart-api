@@ -33,3 +33,7 @@ test/
 **/*.spec.ts
 **/*.test.ts
 jest.config.js
+
+cdk.out
+deploy
+test
